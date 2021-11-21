@@ -1,0 +1,951 @@
+body{
+  font-family: 'Shippori Antique', sans-serif;
+  background-color:black;
+  overflow:hidden;
+}
+
+#Map{
+  position: absolute;
+  left:0%;
+  top:0%;
+  width:1365px;
+  height:720px;
+  
+  background-color: #cccccc;
+  background-position: top 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("finished.jpg");
+  overflow:scroll;
+}
+
+#Background{
+  position: absolute;
+  left:0%;
+  top:0%;
+  width:100%;
+  height:100%;
+  background-image: url("night2.jpeg");
+  background-color: #cccccc;
+  background-position: top 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Background2{
+  position: absolute;
+  left:0%;
+  top:0%;
+  width:100%;
+  height:100%;
+  background-image: url("bac.jpg");
+  background-color: #cccccc;
+  background-position: top 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Background3{
+  position: absolute;
+  left:0%;
+  top:0%;
+  width:100%;
+  height:100%;
+  background-image: url("stars.jpg");
+  background-color: #cccccc;
+  background-position: top 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#NightSkyBad{
+  position: absolute;
+  left:0%;
+  top:0%;
+  width:100%;
+  height:100%;
+  background-image: url("light5.jpg");
+  background-color: #cccccc;
+  background-position: top 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#NightSkyGood{
+  position: absolute;
+  left:0%;
+  top:0%;
+  width:100%;
+  height:100%;
+  background-image: url("nolight.jpg");
+  background-color: #cccccc;
+  background-position: top 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Title{
+  color:white;
+  text-align:center;
+  width:100%;
+  height:20%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  font-size:200px;
+  position:absolute;
+  left:0%;
+  top:-20%;
+  opacity:0;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  animation: fadeIn 2s ease;
+  animation-delay: 1s;
+  animation-fill-mode:forwards;
+}
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+    top:-20%;
+	}
+	to {
+		top:3%;
+    opacity: 1;
+	}
+}
+@keyframes fadeIn2 {
+	from {
+		opacity: 0;
+    left:-20%;
+	}
+	to {
+		left:40%;
+    opacity: 1;
+	}
+}
+@keyframes fadeIn3 {
+	from {
+		opacity: 0;
+    left:-40%;
+	}
+	to {
+		left:30%;
+    opacity: 1;
+	}
+}
+
+@keyframes fadeIn4 {
+  from {
+    opacity: 0;
+    left:-40%;
+  }
+  to {
+    left:30%;
+    opacity: 1;
+  }
+}
+
+.wrapper{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#Go{
+  background: rgba(0, 0, 0, 0);
+  color:white;
+  display:flex;
+  border: 2px solid white;
+  font-size:50px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  width:20%;
+  height:10%;
+  position: absolute;
+  left:-20%;
+  top:30%;
+  text-decoration:none;
+  transition:1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  animation: fadeIn2 3s ease;
+  animation-delay: 2s;
+  animation-fill-mode:forwards;
+}
+#GoMap{
+  background: rgba(0, 0, 0, 0);
+  color:white;
+  display:flex;
+  border: 2px solid white;
+  font-size:50px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  width:40%;
+  height:10%;
+  position: absolute;
+  left:-40%;
+  top:70%;
+  text-decoration:none;
+  transition:1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  animation: fadeIn3 3s ease;
+  animation-delay: 4s;
+  animation-fill-mode:forwards;
+}
+#Go span{
+  position: absolute;
+  z-index:2;
+}
+
+#Go:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  transition: all .5s;
+}
+
+#Go:hover{
+  color:black;
+  transform:scale(1.1);
+  transition: 1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#Go:hover:after{
+  width: 100%;
+}
+#GoMap span{
+  position: absolute;
+  z-index:2;
+}
+
+#GoMap:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  transition: all .5s;
+}
+
+#GoMap:hover{
+  color:black;
+  transform:scale(1.1);
+  transition: 1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#GoMap:hover:after{
+  width: 100%;
+}
+
+#Question{
+  border:solid 10px white;
+  border-radius:20px;
+  background:black;
+  color:white;
+  font-size:50px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  width:80%;
+  height:30%;
+  position: absolute;
+  left:10%;
+  top:2%;
+  text-decoration:none;
+  transition:0.5s all;
+}
+.button{
+  border:solid 10px white;
+  border-radius:20px;
+  background:rgba(0,0,0,0.5);
+  color:white;
+  font-size:50px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  width:90%;
+  height:20%;
+  position: absolute;
+  text-decoration:none;
+  transition:1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#button1{
+  left:5%;
+  top:35%;
+}
+#button2{
+  left:5%;
+  top:57%;
+}
+#button3{
+  left:5%;
+  top:79%;
+}
+.button:hover{
+  background-color:white;
+  color:black;
+  transform:scale(1.05);
+  transition: 1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#This{
+  background: rgba(0, 0, 0, 0.5);
+  color:white;
+  display:flex;
+  border: 2px solid white;
+  font-size:50px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  width:40%;
+  height:10%;
+  position: absolute;
+  left:30%;
+  top:-15%;
+  text-decoration:none;
+  transition:1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  animation-name:g;
+  animation-duration:3s;
+  animation-fill-mode:forwards;
+  animation-delay:1s;
+  
+}
+@keyframes g{
+  from{top:-15%;}
+  to{top:15%;}
+}
+#Click{
+  width:100%;
+  height:100%;
+  background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none;
+}
+#Continue{
+  background: rgba(0, 0, 0, 0.6);
+  color:white;
+  display:flex;
+  border: 2px solid white;
+  font-size:50px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  width:40%;
+  height:10%;
+  position: absolute;
+  left:30%;
+  top:115%;
+  text-decoration:none;
+  transition:1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  animation-name:g2;
+  animation-duration:3s;
+  animation-fill-mode:forwards;
+  animation-delay:2s;
+  
+}
+@keyframes g2{
+  from{top:115%;}
+  to{top:80%;}
+}
+.Link{
+  background: rgba(0, 0, 0, 0.6);
+  color:white;
+  display:flex;
+  border: 2px solid white;
+  font-size:50px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  width:40%;
+  height:10%;
+  position: absolute;
+  left:30%;
+  
+  text-decoration:none;
+  transition:1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.Link span{
+  position: absolute;
+  z-index:2;
+}
+
+.Link:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  transition: all .5s;
+}
+
+.Link:hover{
+  color:black;
+  transform:scale(1.1);
+  transition: 1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.Link:hover:after{
+  width: 100%;
+}
+#L1{
+  top:12.5%;
+}
+#L2{
+  top:27.5%;
+}
+
+#L3{
+  top:42.5%;
+}
+#L4{
+  top:57.5%;
+}
+#L5{
+  top:72.5%;
+}
+
+#Proj1text{
+  color:white;
+  text-align:center;
+  width:100%;
+  height:20%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  font-size:50px;
+  position:absolute;
+  left:0%;
+  top:3%;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  animation: g 3s forwards;
+}
+#Marker{
+  position: absolute;
+  //left:100px;
+  //bottom:100px;
+  //border:2px solid red;
+  width:20px;
+  height:50px;
+  background-position: top 50% left 50%;
+  background-repeat: no-repeat;
+  background-size:20px;
+  background-image:url("tackreal.png");
+
+}
+#Back{
+  background: rgba(0, 0, 0, 0);
+  color:white;
+  display:flex;
+  border: 2px solid white;
+  font-size:50px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  width:20%;
+  height:10%;
+  position: absolute;
+  left:5%;
+  top:85%;
+  text-decoration:none;
+  transition:1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  
+}
+#Back span{
+  position: absolute;
+  z-index:2;
+}
+
+#Back:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  transition: all .5s;
+}
+
+#Back:hover{
+  color:black;
+  transform:scale(1.1);
+  transition: 1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#Back:hover:after{
+  width: 100%;
+}
+
+#GoSim{
+  background: rgba(0, 0, 0, 0);
+  color:white;
+  display:flex;
+  border: 2px solid white;
+  font-size:50px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  width:40%;
+  height:10%;
+  position: absolute;
+  left:-40%;
+  top:50%;
+  text-decoration:none;
+  transition:1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  animation: fadeIn4 3s ease;
+  animation-delay: 3s;
+  animation-fill-mode:forwards;
+}
+
+#GoSim span{
+  position: absolute;
+  z-index:2;
+}
+
+#GoSim:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  transition: all .5s;
+}
+
+#GoSim:hover{
+  color:black;
+  transform:scale(1.1);
+  transition: 1s all;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#GoSim:hover:after{
+  width: 100%;
+}
+#simtext{
+  position: absolute;
+  width:80%;
+  left:30%;
+  top:83%;
+  height:20%;
+  color:white;
+  font-size:45px;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#Info{
+  position: absolute;
+  width:20%;
+  left:1%;
+  top:54%;
+  height:23%;
+  color:white;
+  font-size:30px;
+  border:2px solid white;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+#sky{
+  position: absolute;
+  left:0%;
+  top:0%;
+  width:100%;
+  height:100%;
+  
+  background-image: url("sss.jpg");
+  background-color: #cccccc;
+  background-position: top 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition:1s all;
+}
+#Blocker{
+  position: absolute;
+  left:0%;
+  top:0%;
+  width:100%;
+  height:67%;
+  opacity:1;
+  background-color:black;
+  transition:1s all;
+}
+.slidecontainer {
+  width: 99.4%;
+  position: absolute;
+  left:0%;
+  top:70%;
+  height:10%;
+  border:5px solid white;
+  border-radius: 100px;
+}
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 100%; /* Specified height */
+  background:rgba(100,100,100,0.7); /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border-radius: 100px;
+}
+
+.slider:active {
+  opacity: 0.7;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 120px; /* Set a specific slider handle width */
+  height: 120px; /* Slider handle height */
+  background: white; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius:50%;
+}
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: white; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius:50%;
+}
+
+.sky1{
+  filter:brightness(100%);
+}
+.sky2{
+  filter:brightness(99%);
+}
+.sky3{
+  filter:brightness(98%);
+}
+.sky4{
+  filter:brightness(97%);
+}
+.sky5{
+  filter:brightness(96%);
+}
+.sky6{
+  filter:brightness(95%);
+}
+.sky7{
+  filter:brightness(94%);
+}
+.sky8{
+  filter:brightness(93%);
+}
+.sky9{
+  filter:brightness(92%);
+}
+.sky10{
+  filter:brightness(91%);
+}
+.sky11{
+  filter:brightness(90%);
+}
+.sky12{
+  filter:brightness(89%);
+}
+.sky13{
+  filter:brightness(88%);
+}
+.sky14{
+  filter:brightness(87%);
+}
+.sky15{
+  filter:brightness(86%);
+}
+.sky16{
+  filter:brightness(85%);
+}
+.sky17{
+  filter:brightness(84%);
+}
+.sky18{
+  filter:brightness(83%);
+}
+.sky19{
+  filter:brightness(82%);
+}
+.sky20{
+  filter:brightness(81%);
+}
+.sky21{
+  filter:brightness(80%);
+}
+.sky22{
+  filter:brightness(79%);
+}
+.sky23{
+  filter:brightness(78%);
+}
+.sky24{
+  filter:brightness(77%);
+}
+.sky25{
+  filter:brightness(76%);
+}
+.sky26{
+  filter:brightness(75%);
+}
+.sky27{
+  filter:brightness(74%);
+}
+.sky28{
+  filter:brightness(73%);
+}
+.sky29{
+  filter:brightness(72%);
+}
+.sky30{
+  filter:brightness(71%);
+}
+.sky31{
+  filter:brightness(70%);
+}
+.sky32{
+  filter:brightness(69%);
+}
+.sky33{
+  filter:brightness(68%);
+}
+.sky34{
+  filter:brightness(67%);
+}
+.sky35{
+  filter:brightness(66%);
+}
+.sky36{
+  filter:brightness(65%);
+}
+.sky37{
+  filter:brightness(64%);
+}
+.sky38{
+  filter:brightness(63%);
+}
+.sky39{
+  filter:brightness(62%);
+}
+.sky40{
+  filter:brightness(61%);
+}
+.sky41{
+  filter:brightness(60%);
+}
+.sky42{
+  filter:brightness(59%);
+}
+.sky43{
+  filter:brightness(58%);
+}
+.sky44{
+  filter:brightness(57%);
+}
+.sky45{
+  filter:brightness(56%);
+}
+.sky46{
+  filter:brightness(55%);
+}
+.sky47{
+  filter:brightness(54%);
+}
+.sky48{
+  filter:brightness(53%);
+}
+.sky49{
+  filter:brightness(52%);
+}
+.sky50{
+  filter:brightness(51%);
+}
+.sky51{
+  filter:brightness(49%);
+}
+.sky52{
+  filter:brightness(48%);
+}
+.sky53{
+  filter:brightness(47%);
+}
+.sky54{
+  filter:brightness(46%);
+}
+.sky55{
+  filter:brightness(45%);
+}
+.sky56{
+  filter:brightness(44%);
+}
+.sky57{
+  filter:brightness(43%);
+}
+.sky58{
+  filter:brightness(42%);
+}
+.sky59{
+  filter:brightness(41%);
+}
+.sky60{
+  filter:brightness(40%);
+}
+.sky61{
+  filter:brightness(39%);
+}
+.sky62{
+  filter:brightness(38%);
+}
+.sky63{
+  filter:brightness(37%);
+}
+.sky64{
+  filter:brightness(36%);
+}
+.sky65{
+  filter:brightness(35%);
+}
+.sky66{
+  filter:brightness(34%);
+}
+.sky67{
+  filter:brightness(33%);
+}
+.sky68{
+  filter:brightness(32%);
+}
+.sky69{
+  filter:brightness(31%);
+}
+.sky70{
+  filter:brightness(30%);
+}
+.sky71{
+  filter:brightness(29%);
+}
+.sky72{
+  filter:brightness(28%);
+}
+.sky73{
+  filter:brightness(27%);
+}
+.sky74{
+  filter:brightness(26%);
+}
+.sky75{
+  filter:brightness(25%);
+}
+.sky76{
+  filter:brightness(24%);
+}
+.sky77{
+  filter:brightness(23%);
+}
+.sky78{
+  filter:brightness(22%);
+}
+.sky79{
+  filter:brightness(21%);
+}
+.sky80{
+  filter:brightness(20%);
+}
+.sky81{
+  filter:brightness(19%);
+}
+.sky82{
+  filter:brightness(18%);
+}
+.sky83{
+  filter:brightness(17%);
+}
+.sky84{
+  filter:brightness(16%);
+}
+.sky85{
+  filter:brightness(15%);
+}
+.sky86{
+  filter:brightness(14%);
+}
+.sky87{
+  filter:brightness(13%);
+}
+.sky88{
+  filter:brightness(12%);
+}
+.sky89{
+  filter:brightness(11%);
+}
+.sky90{
+  filter:brightness(10%);
+}
+.sky91{
+  filter:brightness(9%);
+}
+.sky92{
+  filter:brightness(8%);
+}
+.sky93{
+  filter:brightness(7%);
+}
+.sky94{
+  filter:brightness(6%);
+}
+.sky95{
+  filter:brightness(5%);
+}
+.sky96{
+  filter:brightness(4%);
+}
+.sky97{
+  filter:brightness(3%);
+}
+.sky98{
+  filter:brightness(2%);
+}
+.sky99{
+  filter:brightness(1%);
+}
+.sky100{
+  filter:brightness(0%);
+}
+
+/*
+#simtext{
+  color:white;
+  text-align:center;
+  width:100%;
+  height:20%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  font-size:50px;
+  position:absolute;
+  left:0%;
+  top:-20%;
+  opacity:0;
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
